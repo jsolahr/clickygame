@@ -32,17 +32,19 @@ shuffleDog = id => {
       return;
     }
     this.setState({dogs, dogsArray, score: dogsArray.length, status: ""});
-  } 
 
-  // Set this.state.friends equal to the new friends array
-  this.setState({ dogs });
+    for (var i = dogs.length -1; i > 0; i--) {
+      var j = Math.floor(Math.random()* i +1);
+      [dogs[i], dogs[j]] = [dogs[j], dogs[i]];
+    }
+  } 
 };
 
-render() {
 
+render() {
   return (
     <HelloBootstrap>
-       <Score total={this.state.score}
+       <Score total ={this.state.score}
                message={this.state.message}
                />
       {this.state.dogs.map(dogs => (

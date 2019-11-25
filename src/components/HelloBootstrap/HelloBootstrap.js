@@ -9,13 +9,12 @@ function HelloBootstrap(props) {
         <div className="navbar-brand">
           Clicky Game
         </div>
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Shuffle
-            </button>
+        <a href ="/"> <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Reset 
+            </button></a>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <div className="nav-link">
-              Score:  <span className="sr-only"></span>
             </div>
           </li>
         </ul>
