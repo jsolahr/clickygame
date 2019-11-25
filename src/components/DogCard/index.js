@@ -14,8 +14,7 @@ function DogCard(props) {
             </li>
           </ul>
         </div>
-        <span onClick={() => props.removeDog(props.id)} className="remove">
-          𝘅
+        <span onClick={() => props.shuffleDog(props.id)} className="shuffle"> <button>Click</button>
         </span>
       </div>
     );
