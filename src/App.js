@@ -19,26 +19,23 @@ state = {
 
 shuffleDog = id => {
   // Filter this.state.dogs for dogs with an id not equal to the id being removed
-
   const dogsArray = this.state.dogsArray;
 
   if(dogsArray.includes(id)){
     this.setState({dogsArray: [], score:0, message: "You Lost!"});
-    return;
-  }else {
+  } else  {
     dogsArray.push(id)
     if (dogsArray.length === 12) {
       this.setState({dogsArray: [], score: 12, status: "You Won!"});
       return;
     }
-    this.setState({dogs, dogsArray, score: dogsArray.length, status: ""});
-
+  this.setState({dogs, dogsArray, score: dogsArray.length, message: ""});
+ }
     for (var i = dogs.length -1; i > 0; i--) {
       var j = Math.floor(Math.random()* i +1);
       [dogs[i], dogs[j]] = [dogs[j], dogs[i]];
     }
-  } 
-};
+  };
 
 
 render() {
