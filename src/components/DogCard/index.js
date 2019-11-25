@@ -9,14 +9,8 @@ function DogCard(props) {
         <div className="img-container">
           <img alt={props.name} src={props.image} />
         </div>
-        <div className="content">
-          <ul>
-            <li>
-              <strong>Name:</strong> {props.name}
-            </li>
-          </ul>
-        </div>
-        <span onClick={() => props.shuffleDog(props.id)} className="shuffle"> <button className="btn btn-primary">Click</button>
+       
+        <span onClick={() => props.shuffleDog(props.id)} className="shuffle"><button className="btn btn-primary">Click</button>
         </span>
       </div>
     );
