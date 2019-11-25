@@ -25,8 +25,8 @@ shuffleDog = id => {
     this.setState({dogsArray: [], score:0, message: "You Lost!"});
   } else  {
     dogsArray.push(id)
-    if (dogsArray.length === 12) {
-      this.setState({dogsArray: [], score: 12, status: "You Won!"});
+    if (dogsArray === 12) {
+      this.setState({dogsArray: [], score: 12, message: "You Won!"});
       return;
     }
   this.setState({dogs, dogsArray, score: dogsArray.length, message: ""});
@@ -36,7 +36,6 @@ shuffleDog = id => {
       [dogs[i], dogs[j]] = [dogs[j], dogs[i]];
     }
   };
-
 
 render() {
   return (
