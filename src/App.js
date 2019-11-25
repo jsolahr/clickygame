@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import dogs from "./dogs.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HelloBootstrap from "./components/HelloBootstrap/HelloBootstrap"
 import Wrapper from "./components/Wrapper"
 import DogCard from "./components/DogCard"
@@ -23,8 +24,10 @@ shuffleDog = id => {
 };
 
 render() {
+
   return (
     <Wrapper>
+        <HelloBootstrap/>
       {this.state.dogs.map(dogs => (
         <DogCard
           shuffleDog={this.shuffleDog}

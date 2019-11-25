@@ -1,18 +1,20 @@
 import React from "react";
+import "./HelloBootstrap.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function HelloBootstrap(props) {
-  return (
 
-     <div className="container">{props.children}</div>,
-      <div className="jumbotron">
-        <h1>Clicky Game</h1>
-        <p>
-          <button className="btn btn-primary btn-lg">Click to shuffle</button>
-        </p>
-        <h2>Score:</h2>
-      </div>
-  
-  );
-}
+const HelloBootstrap = props => (
+  <nav className="navbar navbar-default">
+  <div className="container-fluid">
+    <div className="navbar-header">Clicky Game
+    </div>
+    <ul className="nav navbar-nav">
+      <li className="active">Score: </li>
+    </ul>
+  </div>
+</nav>
+
+);
+
 
 export default HelloBootstrap;
