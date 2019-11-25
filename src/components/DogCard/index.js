@@ -16,7 +16,7 @@ function DogCard(props) {
             </li>
           </ul>
         </div>
-        <span onClick={() => props.shuffleDog(props.id)} className="shuffle"> <button>Click</button>
+        <span onClick={() => props.shuffleDog(props.id)} className="shuffle"> <button className="btn btn-primary">Click</button>
         </span>
       </div>
     );
